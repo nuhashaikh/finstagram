@@ -1,35 +1,43 @@
-<! doctype html> <! --tell browswer what typw of document is presented-->
+<! doctype html> <!--tell browswer what type of document is presented-->
 <html>
     <head>
         <title>
-            Finstagram <! title of the page that shows up in browswer>
+            Finstagram <!--title of the page that shows up in browswer-->
         </title>
 
         <link rel="stylesheet" href="../../../stylesheets/normalize.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700italic,700,300">
         <link rel="stylesheet" href="../../../stylesheets/lib.css">
+        <link rel="stylesheet" href="../../../stylesheets/app.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
         <title>Finstagram</title>
-        
+    </head>
     <body>
         <header>
-            <h1> <! used for text headings, browswers have default styles>
+            <h1> <! --used for text headings, browswers have default styles-->
                 Finstagram
             </h1>
         </header>
-        <!have options as to which tag to use for the section after our>
-        <main role="main"><! where main content will go>
-            <article class="finstagram-post"><!add a wrapper tag for a single post – that is, a tag that will "wrap" all the content for an individual Finstagram post>
+        <!-- have options as to which tag to use for the section after our-->
+        <main role="main"><!-- where main content will go-->
+
+            <article class="finstagram-post"><!--add a wrapper tag for a single post – that is, a tag that will "wrap" 
+                all the content for an individual Finstagram post-->
+
                 <div class="user-info">
-                    <img src="http://naserca.com/images/sharky_j.jpg" alt="sharky_j"><! img to show image posted>
-                    <! The alt property of the image tag is there to provide information about the image in case the image doesn't load correctly. 
-                    It is also read by screen readers for the visually impaired.>
-                    <h2>sharky_j</h2> <! shows username>
-                    <h3>15 minutes ago</h3><! smaller than h2 to show time posted>
+                    <img src="http://naserca.com/images/sharky_j.jpg" alt="sharky_j"><!-- img to show image posted-->
+                    <!-- The alt property of the image tag is there to provide information about the image 
+                        in case the image doesn't load correctly.It is also read by screen readers for the visually impaired.-->
+
+                    <h2>sharky_j</h2> <!-- shows username-->
+                    <h3>15 minutes ago</h3><!-- smaller than h2 to show time posted-->
                 </div>
-                <a class="photo" href="#"> <! (anchor) tag gives you the power of linking!>
-                    <! The href attribute is what you're linking to>
-                    <! leaving a dummy value there (#) because we don't have another page to link to yet>
-                    <img src="http://naserca.com/images/shark.png" alt="post from shark_j">
+
+                <a class="photo" href="#"> <!-- (anchor) tag gives you the power of linking!-->
+                    <!-- The href attribute is what you're linking to-->
+                    <!-- leaving a dummy value there (#) because we don't have another page to link to yet-->
+                    <img src="http://naserca.com/images/shark.png" alt="finstagram post from sharky_j">
                 </a>
                 <div class="actions">
                     0 likes
@@ -37,15 +45,65 @@
                         0 comments
                     </span>
                 </div>
+
                     <ul class="comments">
-                        <li><! comments are listed in the ul (unordered list) tag within li, common pattern when need to display list of things>
+                        <li><!-- comments are listed in the ul (unordered list) tag within li, common pattern when need to display 
+                            list of things-->
                             <p>
-                                shark_j: Out for the long weekend.. too embarrasses to show beach bod ;D!
+                                shark_j: Out for the long weekend.. too embarrassed to show beach bod ;D!
                             </p>
                         </li>
                     </ul>
             </article>
+
+            <article class="finstagram-post">
+                <div class="user-info">
+                    <img src="http://naserca.com/images/kirk_whalum.jpg" alt="kirk_whalum">
+                    <h2>kirk_whalum</h2>
+                    <h3>1 hour ago</h3>
+                </div>
+
+                <a class="photo" href="#">
+                    <img src="http://naserca.com/images/whale.jpg" alt="finstagram post from kirk_whalum">
+                </a>
+
+                <div class="actions">
+                    0 likes
+                    <span class="comment-count">0 comments</span>
+                </div>
+
+                <ul class="comments">
+                    <li>
+                        <p>
+                            kirk_whalum: #weekendvibes
+                        </p>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="finstagram-post">
+                <div class="user-info">
+                    <img src="http://naserca.com/images/marlin_peppa.jpg" alt="marlin_peppa">
+                    <h2>marlin_peppa</h2>
+                    <h3>3 hours ago</h3>
+                </div>
+
+                <a class="photo" href="#">
+                    <img src="http://naserca.com/images/marlin.jpg" alt="finstagram post from marlin_peppa">
+                </a>
+                <div class="actions">
+                    0 likes
+                    <span class="comment-count">0 comments</span>
+                </div>
+                <ul class="comments">
+                    <li>
+                        <p>
+                            marlin_peppa: lunchtime! ;)
+                        </p>
+                    </li>
+                </ul>
+            </article>
+
         </main>
     </body>
-    </head>
 </html>
