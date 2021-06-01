@@ -9,7 +9,7 @@ end
 
 # When a browser requests the root of the application
 get '/' do
-        finstagram_post_shark={
+        @finstagram_post_shark={
                 username: "sharky_j",
                 avatar_url:  "http://naserca.com/images/sharky_j.jpg",
                 photo_url: "http://naserca.com/images/shark.jpg",
@@ -22,7 +22,7 @@ get '/' do
                 }]
         }
 
-        finstagram_post_marlin = {
+        @finstagram_post_marlin = {
                 username: "marlin_peppa",
                 avatar_url: "http://naserca.com/images/marlin_peppa.jpg",
                 photo_url: "http://naserca.com/images/marlin.jpg",
@@ -34,7 +34,7 @@ get '/' do
                         text: "lunchtime! ;)"
                 }]
          }
-         finstagram_post_whale = {
+         @finstagram_post_whale = {
                 username: "kirk_whalum",
                 avatar_url: "http://naserca.com/images/kirk_whalum.jpg",
                 photo_url: "http://naserca.com/images/whale.jpg",
@@ -47,8 +47,10 @@ get '/' do
                 }]
          }
 
-         [finstagram_post_shark, finstagram_post_whale, finstagram_post_marlin].to_s 
+         @finstagram_posts = [@finstagram_post_shark, @finstagram_post_whale, @finstagram_post_marlin]
          #to_s there at the end stands for "to string"
+
+         erb(:index) #this is calling the erb method, predefined
 
 end
 # This code tells apps  to simply display the file 
