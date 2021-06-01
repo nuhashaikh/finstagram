@@ -23,27 +23,36 @@ def yellow_pager(stringOfLetters)
         return false   
     else
         number_output=""
-        stringOfLetters= stringOfLetters.to_a
-        for i in stringOfLetters do
-            if i == A ||i== B ||i== C
+        i=0
+        10.times do
+            if stringOfLetters(i) == 'A' ||stringOfLetters(i)== 'B' ||stringOfLetters(i)== 'C'
                 number_output+="2"
-                elsif i == D ||i == E || i ==F
+                i++
+            elsif stringOfLetters(i) == 'D' ||stringOfLetters(i) == 'E' || stringOfLetters(i) =='F'
                     number_output+="3"
-                elsif i == G ||i == H ||i == I
+                    i++
+            elsif stringOfLetters(i) == 'G' ||stringOfLetters(i) == 'H' ||stringOfLetters(i) == 'I'
                     number_output+="4"
-                elsif i == J || i ==K || i ==L
+                    i++
+            elsif stringOfLetters(i) == 'J'|| stringOfLetters(i) =='K' || stringOfLetters(i)=='L'
                     number_output+="5"
-                elsif i == M || i ==N ||i == O
+                    i++
+            elsif stringOfLetters(i) == 'M' || stringOfLetters(i) =='N' ||stringOfLetters(i) == 'O'
                     number_output+="6"
-                elsif i == P || i ==Q || i ==R || i ==S
+                    i++
+            elsif stringOfLetters(i) == 'P' || stringOfLetters(i) =='Q' || stringOfLetters(i) =='R' || stringOfLetters(i) =='S'
                     number_output+="7"
-                elsif i == T || i ==U || i ==V
+                    i++
+            elsif stringOfLetters(i) == 'T' || stringOfLetters(i) =='U' || stringOfLetters(i) =='V'
                     number_output+="8"
-                elsif i == W || i ==X || i ==Y || i ==Z
+                    i++
+            elsif stringOfLetters(i) == 'W' || stringOfLetters(i) =='X' || stringOfLetters(i) =='Y' || stringOfLetters(i) =='Z'
                     number_output+="9"
+                    i++
             end
         end
     end
+        return number_output
 end
 
 p yellow_pager("helloworld")
