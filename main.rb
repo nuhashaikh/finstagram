@@ -33,7 +33,6 @@ def decision_list(input_string)
         number_output=""
         i=0
         input_string_length.times do
-                p input_string.slice(i)
              if (input_string.slice(i) == 'A' ||input_string.slice(i)== 'B' ||input_string.slice(i)== 'C')
                  number_output+="2"
             elsif (input_string.slice(i) == 'D' ||input_string.slice(i) == 'E' || input_string.slice(i) =='F')
@@ -59,3 +58,5 @@ def decision_list(input_string)
 end
 
 p yellow_pager("HELLOWORLD")
+p yellow_pager("helloworld")
+p yellow_pager("NUHASHAIKH")

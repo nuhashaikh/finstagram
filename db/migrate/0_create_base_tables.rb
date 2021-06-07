@@ -1,4 +1,4 @@
-class CreateBaseTables < ActiveRecord::Migration
+class CreateBaseTables < ActiveRecord::Migration #This file will be used to create four database tables with various columns.
 
   def change
     create_table :users do |t|
