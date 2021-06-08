@@ -1,6 +1,6 @@
 
         <header>
-            <h1> <! --used for text headings, browswers have default styles-->
+            <h1> 
                 Finstagram
             </h1>
         </header>
@@ -11,30 +11,30 @@
                 all the content for an individual Finstagram post-->
 
                 <div class="user-info">
-                    <img src="http://naserca.com/images/sharky_j.jpg" alt="sharky_j">
+                    <img src="<%= finstagram_post.user.avatar_url %>" alt="<%= finstagram_post.user.username %>">
                     <!-- img to show image posted, the alt property of the image tag is there to provide information about the image 
                         in case the image doesn't load correctly.It is also read by screen readers for the visually impaired.-->
 
-                    <h2><%= finstagram_post[:username]%></h2> <!-- shows username-->
-                    <h3><%= finstagram_post[:humanized_time_ago]%></h3><!-- smaller than h2 to show time posted-->
+                    <h2><%= finstagram_post.user.username %></h2> <!-- shows username-->
+                    <h3><%= finstagram_post.humanized_time_ago %></h3><!-- smaller than h2 to show time posted-->
                 </div>
 
                 <a class="photo" href="#"> <!-- (anchor) tag gives you the power of linking!-->
                     <!-- The href attribute is what you're linking to-->
                     <!-- leaving a dummy value there (#) because we don't have another page to link to yet-->
-                    <img src="http://naserca.com/images/shark.png" alt="finstagram post from sharky_j">
+                    <img src="<%= finstagram_post.photo_url %>" alt="finstagram post from <%= finstagram_post.user.username %>">
                 </a>
                 <div class="actions">
-                   <%= finstagram_post[:like_count]%> likes
-                    <span class="comment-count"><%= finstagram_post[:comment_count]%> comment</span>
+                   <%= finstagram_post.like_count %> likes
+                    <span class="comment-count"><%= finstagram_post.comment_count %> comment</span>
                 </div>
 
                     <ul class="comments">
-                        <% finstagram_post[:comments].each do |comment|%>
+                        <% finstagram_post.comments.each do |comment|%>
                         <li><!-- comments are listed in the ul (unordered list) tag within li, common pattern when need to display 
                             list of things-->
                             <p>
-                                <%= comment[:username]%>%: <%=  comment[:text]%>
+                               <%= comment.user.username %>: <%= comment.text %>
                             </p>
                         </li>
                     <% end %>
