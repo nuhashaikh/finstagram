@@ -3,6 +3,16 @@
             <h1> 
                 Finstagram
             </h1>
+        <div class="login-info">
+            <% if current_user %>
+                <%= current_user.username %>
+                <a href="/logout">Logout</a>
+            <% else %>
+                <a href="/login">Login</a>
+                <a href="/signup">Signup</a>
+            <% end %>
+        </div>
+
         </header>
         <!-- have options as to which tag to use for the section after our-->
         <main role="main"><!-- where main content will go-->
