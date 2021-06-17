@@ -1,54 +1,10 @@
+<% if current_user %>
+    <div class="new-finstagram-post">
+        <a href="/finstagram_posts/new" class="button">New Post</a>
+    </div>
+<% end %>
 
-        <header>
-            <h1> 
-                Finstagram
-            </h1>
-        <div class="login-info">
-            <% if current_user %>
-                <%= current_user.username %>
-                <a href="/logout">Logout</a>
-            <% else %>
-                <a href="/login">Login</a>
-                <a href="/signup">Signup</a>
-            <% end %>
-        </div>
+<% @finstagram_posts.each do |finstagram_post| %>
+    <%= erb :'shared/finstagram_post', locals: { finstagram_post: finstagram_post } %>
+<% end %>
 
-        </header>
-        <!-- have options as to which tag to use for the section after our-->
-        <main role="main"><!-- where main content will go-->
-            <% @finstagram_posts.each do |finstagram_post|%>
-            <article class="finstagram-post"><!--add a wrapper tag for a single post – that is, a tag that will "wrap" 
-                all the content for an individual Finstagram post-->
-
-                <div class="user-info">
-                    <img src="<%= finstagram_post.user.avatar_url %>" alt="<%= finstagram_post.user.username %>">
-                    <!-- img to show image posted, the alt property of the image tag is there to provide information about the image 
-                        in case the image doesn't load correctly.It is also read by screen readers for the visually impaired.-->
-
-                    <h2><%= finstagram_post.user.username %></h2> <!-- shows username-->
-                    <h3><%= finstagram_post.humanized_time_ago %></h3><!-- smaller than h2 to show time posted-->
-                </div>
-
-                <a class="photo" href="#"> <!-- (anchor) tag gives you the power of linking!-->
-                    <!-- The href attribute is what you're linking to-->
-                    <!-- leaving a dummy value there (#) because we don't have another page to link to yet-->
-                    <img src="<%= finstagram_post.photo_url %>" alt="finstagram post from <%= finstagram_post.user.username %>">
-                </a>
-                <div class="actions">
-                   <%= finstagram_post.like_count %> likes
-                    <span class="comment-count"><%= finstagram_post.comment_count %> comment</span>
-                </div>
-
-                    <ul class="comments">
-                        <% finstagram_post.comments.each do |comment|%>
-                        <li><!-- comments are listed in the ul (unordered list) tag within li, common pattern when need to display 
-                            list of things-->
-                            <p>
-                               <%= comment.user.username %>: <%= comment.text %>
-                            </p>
-                        </li>
-                    <% end %>
-                    </ul>
-            </article>
-            <% end %>
-        </main>
