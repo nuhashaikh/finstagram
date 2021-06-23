@@ -1,4 +1,4 @@
-# finstagram
+# Finstagram
 A fun twist on Instagram!
 
 ## Environment Setup Instructions
@@ -21,4 +21,3 @@ A fun twist on Instagram!
 3. _Optional:_ If it shows the button _Expose_ for that port, click that button
 4. You'll see _Open Preview_ and _Open Browser_, either of which will allow you to open your project in a new window or tab or preview pane. Go ahead and click on your preference (or try both at first to see which one you prefer).
 
-You're now set up and ready to work on this project!
