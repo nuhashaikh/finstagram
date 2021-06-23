@@ -1,7 +1,11 @@
 <article class="finstagram-post">
     <div class="user-info">
+    <a  href="/profile/<%= finstagram_post.id %>">
         <img src="<%= finstagram_post.user.avatar_url %>" alt="<%= finstagram_post.user.username %>">
+    </a>
+    <a href="/profile/<%= finstagram_post.id %>">
         <h2><%= finstagram_post.user.username %></h2>
+    </a>
         <h3><%= finstagram_post.humanized_time_ago %></h3>
     </div>
     <a class="photo" href="/finstagram_posts/<%= finstagram_post.id %>">
